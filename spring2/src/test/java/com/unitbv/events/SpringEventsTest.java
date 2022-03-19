@@ -18,7 +18,7 @@ public class SpringEventsTest {
         personService.rentCar("Audi");
 
         final CarService carService = context.getBean(CarService.class);
-
+        System.out.println(carService.getAvailableCars().size());
         assertEquals(carService.getAvailableCars().size(), 1);
 
     }
